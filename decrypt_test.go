@@ -5,6 +5,6 @@ import (
 )
 
 func TestDecrypt(t *testing.T) {
-	res := Decrypt("自己复制过来测试")
+	res := Decrypt("m3u8 data info")
 	t.Log(res)
 }

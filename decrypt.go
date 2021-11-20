@@ -26,7 +26,7 @@ var dis = []rune{
 }
 
 //Decrypt imooc m3u8数据解密
-func Decrypt(encrypt string) string {
+func Decrypt(encrypt string) []byte {
 	data := info{
 		content: encrypt,
 	}
@@ -83,9 +83,9 @@ func Decrypt(encrypt string) string {
 			}
 		}
 	}
-	res := ""
+	res := make([]byte, 0)
 	for _, v := range data.resultInfo {
-		res += string(v)
+		res = append(res, byte(v))
 	}
 	return res
 }
